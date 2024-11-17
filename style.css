@@ -1,0 +1,21 @@
+table {
+    font-size: 0.85rem;
+}
+
+th {
+    font-size: 0.85rem;
+}
+
+.header{
+  background-color: red; /* Replace with your color */
+}
+
+.bg-gold {
+	color: #212427;
+	background-color: #c2b067;
+	}
+
+.bg-gold:not(.collapsed) {
+  color: #212427;
+	background-color: #c2b067;
+	}
