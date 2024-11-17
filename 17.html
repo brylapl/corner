@@ -9,29 +9,19 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
-<div class="container mt-5">
-        <div class="row">
+<div class="container-fluid">
+        <div class="row mt-3">
             <div class="col">
-                <section class="py-4 py-xl-5">
-                    <div class="container">
-                        <div class="text-white bg-dark border rounded border-0 p-4 p-md-5">
-                            <h2 class="fw-bold text-white mb-3 text-center display-1">Rzuty Rożne</h2>
-                            <p class="mb-4"></p>
-                            <div class="my-3"></div>
-                        </div>
-                    </div>
-                </section>
+                <h1 class="display-1 text-center fw-bold">Rzuty rożne</h1>
             </div>
         </div>
-        </div>
-        <div class="row">
+    </div>
+        
+        <div class="row sticky-top bg-white">
             <div class="col">
-                <nav class="navbar navbar-light navbar-expand-md py-3">
+                <nav class="navbar navbar-light navbar-expand py-3">
                     <div class="container">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navcol-3" aria-controls="navcol-3" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navcol-3">
+                        <div class="navbar-collapse" id="navcol-3">
                             <ul class="navbar-nav mx-auto">
                                 <li class="nav-item"><a class="nav-link" href="wczoraj.html">Wczoraj</a></li>
                                 <li class="nav-item"><a class="nav-link" href="index.html">Dziś</a></li>
@@ -39,7 +29,6 @@
                                 <li class="nav-item"><a class="nav-link" href="06.html">06.11</a></li>
                                 <li class="nav-item"><a class="nav-link" href="07.html">07.11</a></li>
                                 <li class="nav-item"><a class="nav-link" href="08.html">08.11</a></li>
-
                             </ul>
                         </div>
                     </div>
@@ -47,24 +36,45 @@
             </div>
         </div>
             
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Vila Nova vs Ituano</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">3.99</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse0" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse0" aria-expanded="false" aria-controls="collapse0">
+                    <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Vila Nova - Ituano</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">3.99</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse0" class="accordion-collapse collapse" aria-labelledby="heading0" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">17</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">16</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">3</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -76,7 +86,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Vila Nova</td>
@@ -438,17 +448,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">17</span> Under <span class="h1 badge text-bg-danger p-1">16</span> Draw <span class="h1 badge text-bg-primary p-1">3</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">21</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">13</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">2</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -822,10 +850,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">21</span> Under <span class="h1 badge text-bg-danger p-1">13</span> Draw <span class="h1 badge text-bg-primary p-1">2</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -838,24 +862,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Ponte Preta vs Sport Recife</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">0.47</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse1" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                    <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Ponte Preta - Sport Recife</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">0.47</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">12</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">20</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">4</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -867,7 +912,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Ponte Preta</td>
@@ -1229,17 +1274,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">12</span> Under <span class="h1 badge text-bg-danger p-1">20</span> Draw <span class="h1 badge text-bg-primary p-1">4</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">14</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">18</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">4</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -1613,10 +1676,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">14</span> Under <span class="h1 badge text-bg-danger p-1">18</span> Draw <span class="h1 badge text-bg-primary p-1">4</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -1629,24 +1688,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Brusque vs Guarani</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">-1.38</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse2" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                    <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Brusque - Guarani</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">-1.38</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">17</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">15</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">4</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -1658,7 +1738,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Brusque</td>
@@ -2020,17 +2100,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">17</span> Under <span class="h1 badge text-bg-danger p-1">15</span> Draw <span class="h1 badge text-bg-primary p-1">4</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">16</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">16</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">4</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -2404,10 +2502,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">16</span> Under <span class="h1 badge text-bg-danger p-1">16</span> Draw <span class="h1 badge text-bg-primary p-1">4</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -2420,24 +2514,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Chapecoense vs Coritiba</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">-1.38</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse3" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                    <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Chapecoense - Coritiba</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">-1.38</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">16</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">15</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">5</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -2449,7 +2564,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Chapecoense</td>
@@ -2811,17 +2926,35 @@
                                 <td><span class="badge text-bg-danger">Under</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">16</span> Under <span class="h1 badge text-bg-danger p-1">15</span> Draw <span class="h1 badge text-bg-primary p-1">5</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">17</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">16</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">3</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -3195,10 +3328,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">17</span> Under <span class="h1 badge text-bg-danger p-1">16</span> Draw <span class="h1 badge text-bg-primary p-1">3</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -3211,24 +3340,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Santos vs CRB</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">4.39</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse4" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    <span><img src="https://flagcdn.com/w40/br.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Santos - CRB</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">4.39</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">20</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">13</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">3</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -3240,7 +3390,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Santos</td>
@@ -3602,17 +3752,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">20</span> Under <span class="h1 badge text-bg-danger p-1">13</span> Draw <span class="h1 badge text-bg-primary p-1">3</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">16</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">15</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">5</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -3986,10 +4154,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">16</span> Under <span class="h1 badge text-bg-danger p-1">15</span> Draw <span class="h1 badge text-bg-primary p-1">5</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -4002,24 +4166,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Cadiz vs Cordoba</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">0.61</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse5" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Cadiz - Cordoba</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">0.61</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">8</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">6</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">0</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -4031,7 +4216,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Cadiz</td>
@@ -4173,17 +4358,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">8</span> Under <span class="h1 badge text-bg-danger p-1">6</span> Draw <span class="h1 badge text-bg-primary p-1">0</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">6</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">6</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">1</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -4327,10 +4530,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">6</span> Under <span class="h1 badge text-bg-danger p-1">6</span> Draw <span class="h1 badge text-bg-primary p-1">1</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -4343,24 +4542,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Real Oviedo vs Tenerife</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">4.01</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse6" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Real Oviedo - Tenerife</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">4.01</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">7</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">7</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">0</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -4372,7 +4592,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Real Oviedo</td>
@@ -4514,17 +4734,35 @@
                                 <td><span class="badge text-bg-danger">Under</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">7</span> Under <span class="h1 badge text-bg-danger p-1">7</span> Draw <span class="h1 badge text-bg-primary p-1">0</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">6</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">3</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">4</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -4668,10 +4906,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">6</span> Under <span class="h1 badge text-bg-danger p-1">3</span> Draw <span class="h1 badge text-bg-primary p-1">4</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -4684,24 +4918,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Almeria vs Deportivo La Coruna</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">-2.27</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse7" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Almeria - Deportivo La Coruna</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">-2.27</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">5</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">8</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">0</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -4713,7 +4968,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Almeria</td>
@@ -4845,17 +5100,35 @@
                                 <td><span class="badge text-bg-danger">Under</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">5</span> Under <span class="h1 badge text-bg-danger p-1">8</span> Draw <span class="h1 badge text-bg-primary p-1">0</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">11</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">2</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">1</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -5009,10 +5282,6 @@
                                         <td><span class="badge text-bg-success">Over</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">11</span> Under <span class="h1 badge text-bg-danger p-1">2</span> Draw <span class="h1 badge text-bg-primary p-1">1</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -5025,24 +5294,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">FC Cartagena vs Huesca</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">3.3</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse8" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                    <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">FC Cartagena - Huesca</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">3.3</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">6</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">7</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">1</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -5054,7 +5344,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>FC Cartagena</td>
@@ -5196,17 +5486,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">6</span> Under <span class="h1 badge text-bg-danger p-1">7</span> Draw <span class="h1 badge text-bg-primary p-1">1</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">5</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">7</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">1</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -5350,10 +5658,6 @@
                                         <td><span class="badge text-bg-danger">Under</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">5</span> Under <span class="h1 badge text-bg-danger p-1">7</span> Draw <span class="h1 badge text-bg-primary p-1">1</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
@@ -5366,24 +5670,45 @@
 </div>
 
 
-       <div class="card p-2">
-            <div class="card-header d-flex align-items-center flex-row" style="border: none;">
-                <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" style="margin-right: 5px; max-width: 40px;"></span>
-                    <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
-                    <span class="fw-semibold">Real Zaragoza vs Malaga</span>
-                    <span class="badge text-bg-dark" style="margin-left: 5px;">1.39</span>
-                </span>
-            <button class="btn ms-auto btn-link" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
-                pokaż szczegóły
-            </button>
-        </div>
-
-    <div id="collapse9" class="collapse">
-        <div class="card-body">
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item mb-2">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-gold" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                    <span><img src="https://flagcdn.com/w40/es.jpg" alt="flags" class="img-fluid" ></span>
+                        <span class="h6 ms-2" style="font-size: 0.85rem;">17.11.2024 </br>
+                        <span class="fw-semibold">Real Zaragoza - Malaga</span>
+                        <span class="badge text-bg-dark" style="margin-left: 5px;">1.39</span>
+                    </span>
+                </button>
+            </h2>
+            
+    <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
             <div class="row">
                 <div class="col-12 col-md-6 mb-3">
-                     <h5 class="h6 text-center fw-bold mb-2">Drużyna GOSPODARZY</h5>
-                    <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                    <h5 class="h6 text-center fw-bold mb-2">HOME</h5>
+                </hr>
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">8</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">6</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">0</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+        </section>
+        </hr>
+    
+                    <table class="table table-sm table-responsive table-hover text-center">
                         <thead>
                             <tr>
                                 <th>Home</th>
@@ -5395,7 +5720,7 @@
                                 <th>U/O</th>
                             </tr>
                         </thead>
-                        <tbody>
+                    <tbody>
 
                             <tr>
                                 <td>Real Zaragoza</td>
@@ -5537,17 +5862,35 @@
                                 <td><span class="badge text-bg-success">Over</span></td>
                             </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">8</span> Under <span class="h1 badge text-bg-danger p-1">6</span> Draw <span class="h1 badge text-bg-primary p-1">0</span>
-    </h1>
-    
                             </tbody>
                         </table>
                     </div> <!-- End of Home Stats -->
-
                     <div class="col-12 col-md-6 mb-3">
-                            <h5 class="h6 text-center fw-bold mb-2">Drużyna GOŚCI</h5>
-                        <table class="table table-secondary table-bordered table-sm text-center table-responsive">
+                            <h5 class="h6 text-center fw-bold mb-2">AWAY</h5>
+                            </hr>
+                            
+        <section class="mt-2">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                <div class="col-3">
+                    <h1 class="text-gradient text-success">5</h1>
+                    <h5 class="mt-1 fw-bold">Over</h5>  
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-danger">5</h1>
+                    <h5 class="mt-1 fw-bold">Under</h5>     
+                </div>
+                <div class="col-3">
+                    <h1 class="text-gradient text-primary">3</h1>
+                    <h5 class="mt-1 fw-bold">Draw</h5>
+                </div>
+                </div>
+            </div>
+            </hr>
+        </section>
+    
+                            
+                            <table class="table table-sm table-responsive table-hover text-center">
                             <thead>
                                 <tr>
                                     <th>Home</th>
@@ -5691,10 +6034,6 @@
                                         <td><span class="badge text-bg-danger">Under</span></td>
                                     </tr>
         
-    <h1>
-       Over <span class="h1 badge text-bg-success p-1">5</span> Under <span class="h1 badge text-bg-danger p-1">5</span> Draw <span class="h1 badge text-bg-primary p-1">3</span>
-    </h1>
-    
                                 </tbody>
                             </table>
                         </div> <!-- End of Away Stats -->
